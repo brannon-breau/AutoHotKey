@@ -1,0 +1,81 @@
+﻿!l::
+{
+MouseGetPos &xpos, &ypos
+MsgBox "The cursor is at X" xpos " Y" ypos
+}
+
+
+!q::
+{
+strPsScriptFile := A_ScriptDir . "\psScript.ps1"
+	Run "powershell.exe -NoExit -ExecutionPolicy Bypass -File " strPsScriptFile " startMessage"
+	Sleep 3000
+
+	;~ Run "powershell.exe -ExecutionPolicy Bypass -File C:\Users\Main-2020\Desktop\AHK\psScript.ps1 monitorOn"
+	;~ Sleep 30000
+
+	;~ While WinExist("ahk_exe chrome.exe")
+	;~ {
+	;~ WinClose "ahk_exe chrome.exe"
+	;~ }
+
+	;~ Sleep 3000
+
+	;~ Run "chrome.exe -incognito https://developer.servicenow.com/"
+	;~ Sleep 3000
+
+	;~ if WinExist("Home | ServiceNow Developers - Google Chrome")
+	;~ {
+    ;~ WinActivate ; Use the window found by WinExist.
+	;~ }
+	;~ Sleep 3000
+
+	;~ Send "{F11}"
+	;~ Sleep 31000
+
+	;~ Click 1923,250
+	;~ Sleep 10000
+
+	;~ Send "brannon.breau@gmail.com"
+	;~ Sleep 3000
+
+	;~ Send "{Enter}"
+	;~ Sleep 10000
+
+	;~ Send "Big-purple-elephant-1987"
+	;~ Sleep 3000
+
+	;~ Send "{Enter}"
+	;~ Sleep 1800000
+
+	;~ Click 914,657
+
+	;~ Send "{F11}"
+	;~ Sleep 10000
+
+	;~ While WinExist("ahk_exe chrome.exe")
+	;~ {
+	;~ WinClose "ahk_exe chrome.exe"
+	;~ }
+	;~ Sleep 5000
+
+	;~ Run "chrome.exe https://developer.servicenow.com/"
+	;~ Sleep 3000
+
+	;~ if WinExist("Home | ServiceNow Developers - Google Chrome")
+	;~ {
+    ;~ WinActivate ; Use the window found by WinExist.
+	;~ }
+	;~ Sleep 3000
+
+	;~ Send "{F11}"
+	;~ Sleep 3000
+
+	;~ Run "powershell.exe -ExecutionPolicy Bypass -File C:\Users\Main-2020\Desktop\AHK\psScript.ps1 monitorOff"
+	;~ Sleep 5000
+
+	;~ Run "powershell.exe -ExecutionPolicy Bypass -File C:\Users\Main-2020\Desktop\AHK\psScript.ps1 endMessage"
+	;~ Sleep 3000
+
+	ExitApp
+}
